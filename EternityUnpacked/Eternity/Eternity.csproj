@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A090756F-31AD-44CB-8E3E-AC40251A3D2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Eternity</RootNamespace>
+    <AssemblyName>Eternity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Eternity.ico</ApplicationIcon>
+    <StartupObject>Eternity.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="eCryptography" />
+    <Reference Include="hlYbpZwGFsHTZOjQUVHkHLQeqpeN" />
+    <Reference Include="MetroFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="AntiDump.cs" />
+    <Compile Include="Anti_DebugNET\AntiDebugTools\Scanner.cs" />
+    <Compile Include="dummy\{50719c1e-09e2-40c2-815c-db99c57ae33d}.cs" />
+    <Compile Include="dummy\{7d19deb0-6699-4603-ac70-ddd2849f4ba8}.cs" />
+    <Compile Include="dummy\{df132058-ce23-4a39-a96c-9329f61e008d}.cs" />
+    <Compile Include="dummy\{e8360d89-6cb4-4dcc-843c-f455130781b6}.cs" />
+    <Compile Include="dummy\{f2efb0e1-6d14-4ca5-95f8-2b5ed10bb3f2}.cs" />
+    <Compile Include="dummy_ptr\{103c31ac-de31-42c3-9a31-2bb1a0777b37}.cs" />
+    <Compile Include="dummy_ptr\{37bdf5de-32b7-43de-9643-2a4ed595e420}.cs" />
+    <Compile Include="dummy_ptr\{f22babc3-797e-45f4-a443-825d8499d4be}.cs" />
+    <Compile Include="DumpProtect.cs" />
+    <Compile Include="Info.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Register.cs" />
+    <Compile Include="Unbanner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
